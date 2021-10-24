@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order Placed</title>
+    <style>
+        body {
+            background-image: url("images/br.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .order h1 {
+            font-family: "Brush Script MT", cursive;
+            margin-left: 30%;
+            font-size: 90px;
+            color: rgba(255, 255, 255, 0.829);
+        }
+
+        tr {
+            background-color: white;
+            color: black;
+        }
+
+        #button1,
+        #clear,
+        #done {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #318f2e;
+            color: white;
+            padding: 1px 2px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        table {
+            margin-top: -12%;
+            margin-left: 10%;
+        }
+    </style>
+    <script type="text/javascript">
+        function findcost() {
+            var quant1 = parseInt(document.getElementById("quantity1").value);
+            var major = document.getElementById("major");
+            var s = "Item \t \t \t Price \n--------------------------------\n";
+            var totalcost = 0;
+
+            for (var i = 0; i < major.options.length; i++) {
+                var option = major.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost = price * quant1;
+                    s = s + option.text + "\t \t" + price + "\n";
+                }
+            }
+            s = s + "\n\n Total Cost \t \t" + totalcost;
+            document.getElementById("ordereditems").value = s;
+        }
+        function placed() {
+            alert("your Order Confirmed!\nThank you for ordering");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="order">
+        <center>
+            <h1>Order Now !!!</h1>
+        </center>
+    </div>
+    <form name="menuForm">
+        <table border="2">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>BEST FRIEND CHICKEN</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>Receipt</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Dishes of the day :</h2>
+                </td>
+                <td><select id="major" size="3" multiple="3">
+                        <option value="150">Chicken Lollipop</option>
+                        <option value="200"> Tandoori Chicken</option>
+                        <option value="250">Chicken Biryani</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Quantity:<input type="text" id="quantity1" value=""></td>
+                <td><input type="button" id="button1" name="quantity1" value="Total Bill" onClick="findcost()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <textarea id="ordereditems" rows="10" cols="40">
+
+                </textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="reset" id="clear" value="Clear" />
+                </td>
+                <td>
+                    <input type="submit" id="done" value="confirm" onclick="placed();" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

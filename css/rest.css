@@ -1,0 +1,49 @@
+body{
+  overflow-y: hidden;
+  background-color: orange;
+}
+#myVideo{
+   position:fixed;
+   right: 0;
+   min-width: 100%;
+   min-height:100%;
+   background-repeat: no-repeat;
+   width:100%;
+   height: 100vh;
+   object-fit:cover;
+ }
+ .dropbtn {
+   background-color: #4CAF50;
+   color: white;
+   padding: 16px;
+   font-size: 18px;
+   border: none;
+   cursor: pointer;
+   margin-top: 10%;
+   margin-left: 75%;
+   width:100%
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown:hover .dropbtn {
+   background-color: #07f80f;
+ }
+ h1 {
+   overflow: hidden;
+   text-align: center;
+   color: white;
+}
+
+.title{
+  position: relative;
+  display: inline-block;
+  font-family: 'Brush Script MT, Brush Script Std, cursive';
+  color: white;
+  font-size: 100px;
+  padding-left: 3px;
+  margin-left: 40%;
+}

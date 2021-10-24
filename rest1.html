@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chicken</title>
+    <script>
+       function food1()
+      {
+          window.location="rest2.html";
+      }
+    </script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 450px;
+  background-color: red;
+  background-image: linear-gradient(red, yellow);
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+}
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:black;
+    color: white;
+    padding: 15px;
+}
+.b1 {
+  display: block;
+  width: 40%;
+  border: none;
+  background-color: #318f2e;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 30%;
+  background-color:green;
+  background-image: linear-gradient(green,blue);
+}
+.b1:hover {
+  background-color: white;
+  color: black;
+}
+.pic1,.pic2,.pic3 {
+  transition: transform .2s; /* Animation */
+}
+.pic1:hover {
+  transform: scale(1.15);
+}
+.pic2:hover {
+  transform: scale(1.15);
+}
+.pic3:hover {
+  transform: scale(1.15);
+}
+</style>
+<script>
+  function food1()
+  {
+      window.location="rest2.html";
+  }
+</script>
+</head>
+<body>
+  <form name="d1" method="POST">
+<h1><center>Choose Your favourite one</center></h1>
+<div class="row">
+  <div class="column" id="c1" style="background-color:#75d45d;">
+    <h2>Chicken Lollipop</h2>
+    <div class=pic1><img src="images/ch.jpg" height="280px" width="380px"></div>
+    <h3> &hearts;</h3>
+  </div>
+
+  <div class="column" style="background-color:#7ec56c;">
+    <h2>Tandoori Chicken </h2>
+    <div class=pic2><img src="images/ch3.jpg" height="280px" width="380px"></div>
+    <h3> &hearts;</h3>
+  </div>
+
+  <div class="column">
+ 
+    <h2>Chicken Biryani</h2>
+    <div class=pic3><img src="images/444.jpg" height="280px" width="380px"></div>
+    <h3> &hearts;</h3>
+  </div>
+  <div class=or>
+    <button type="button" id="cb" onclick="food1()"  class="b1"><b>Order Now !</b></button>
+  </div>
+</div>
+</form>
+</body>
+</html>
